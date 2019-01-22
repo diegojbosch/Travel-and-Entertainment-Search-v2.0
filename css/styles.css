@@ -1,0 +1,129 @@
+.required-field::after {
+    content: "*";
+    color: red;
+}
+
+#mapDirections {
+  height: 100%;
+}
+
+.textlink{
+    color: dodgerblue;
+}
+
+.textlink:hover {
+    text-decoration: underline;
+}
+
+#form-container {
+    max-width:1000px;
+    padding:40px 20px;
+    background: whitesmoke;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: gainsboro;
+}
+
+#resfav-container {
+    max-width:1300px;
+    padding:40px 20px;
+}
+
+#reviewsSquare {
+    border-style: solid;
+    border-color: gainsboro;
+    border-radius: 5px;
+    border-width: thin;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.rowRes {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.columnRes {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.columnRes img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+    .columnRes {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .columnRes {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+#ratePlace {
+    z-index: 0
+}
+
+.animate-results-hide {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+  position:relative;
+  left: 0;
+}
+
+.animate-results-hide.ng-hide {
+  left: 200%;
+}
+
+.animate-details-hide {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+  position:relative;
+  left: 0;
+}
+
+.animate-details-hide.ng-hide {
+  left: -100%;
+}
+
+.animate-reviews-show {
+  -webkit-transition: 1s linear all;
+  -moz-transition: 1s linear all;
+  transition: opacity 3s;
+  opacity:1;
+}
+
+.animate-reviews-show.ng-show {
+  opacity:0;
+}
+
+.animate-reviews-show.ng-hide {
+  opacity: 0;
+}
+
+.animate-reviews-show.ng-hide-remove,
+.animate-reviews-show.ng-hide-add {
+  display: block !important;
+}
+
+.animate-reviews-show.ng-hide-remove {
+  transition: all linear 1000ms;
+}
+
+.animate-reviews-show.ng-hide-add {
+  transition: all linear 0ms;
+}
